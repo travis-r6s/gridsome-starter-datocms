@@ -48,7 +48,14 @@ query WorkPage ($id: String!) {
 
 <script>
   export default {
-    name: 'Index',
+    metaInfo () {
+      return {
+        title: this.$page.work.title,
+        meta: [
+          { key: 'description', name: 'description', content: this.$page.work.excerpt }
+        ]
+      }
+    },
     components: {
       Carousel: () =>
         import ('vue-carousel')

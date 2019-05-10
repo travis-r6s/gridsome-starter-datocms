@@ -37,8 +37,13 @@ query AboutPage {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'About us'
+  metaInfo () {
+    return {
+      title: this.datoCmsAboutPage.title,
+      meta: [
+        { key: 'description', name: 'description', content: this.datoCmsAboutPage.subtitle }
+      ]
+    }
   },
   computed: {
     datoCmsAboutPage () {

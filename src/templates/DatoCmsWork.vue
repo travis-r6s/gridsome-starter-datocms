@@ -5,11 +5,17 @@
         <h1 class="sheet__title">{{ $page.work.title }}</h1>
         <p class="sheet__lead">{{ $page.work.excerpt }}</p>
         <div class="sheet__slider">
-          <!-- <Slider infinite={true} slidesToShow={2} arrows>
-            {data.datoCmsWork.gallery.map(({ fluid }) => (
-              <img alt={data.datoCmsWork.title} key={fluid.src} src={fluid.src} />
-            ))}
-          </Slider> -->
+          <ClientOnly>
+            <carousel :perPage="1">
+              <slide
+                v-for="(image, index) in $page.work.gallery"
+                :key="index">
+                <img
+                  :src="image.url"
+                  :alt="$page.work.title">
+              </slide>
+            </carousel>
+          </ClientOnly>
         </div>
         <div
           v-html="$page.work.description"
@@ -39,3 +45,19 @@ query WorkPage ($id: String!) {
   }
 }
 </page-query>
+
+<script>
+  export default {
+    name: 'Index',
+    components: {
+      Carousel: () =>
+        import ('vue-carousel')
+        .then(m => m.Carousel)
+        .catch(),
+      Slide: () =>
+        import ('vue-carousel')
+        .then(m => m.Slide)
+        .catch()
+    }
+  }
+</script>

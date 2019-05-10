@@ -63,6 +63,7 @@ query HomePage {
 </page-query>
 
 <script>
+import Vue from 'vue'
 export default {
   metaInfo () {
     return {
@@ -75,6 +76,13 @@ export default {
   computed: {
     seoSettings () {
       return this.$page.allDatoCmsHome.edges[0].node.seoSettings
+    }
+  },
+  beforeMount () {
+    const VueMasonryPlugin = require('vue-masonry').VueMasonryPlugin
+    Vue.use(VueMasonryPlugin)
+    if (typeof this.$redrawVueMasonry === "function") {
+      this.$redrawVueMasonry()
     }
   }
 }

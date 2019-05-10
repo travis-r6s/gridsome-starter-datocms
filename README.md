@@ -1,8 +1,10 @@
-# Default starter for Gridsome
-This is the project you get when you run `gridsome create new-project`.
+# DatoCMS starter for Gridsome
 
-### 1. Install Gridsome CLI tool if you don't have
+This starter uses [DatoCMS](https://www.datocms.com) as a headless CMS.
 
+### 1. Install Gridsome CLI tool if not already installed
+
+`yarn global add @gridsome/cli`
 `npm install --global @gridsome/cli`
 
 ### 2. Create a Gridsome project

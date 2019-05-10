@@ -8,8 +8,10 @@ This starter uses [DatoCMS](https://www.datocms.com) as a headless CMS.
 
 ### 1. Install Gridsome CLI tool if not already installed
 
-`yarn global add @gridsome/cli`
-`npm install --global @gridsome/cli`
+```bash
+yarn global add @gridsome/cli
+npm install --global @gridsome/cli
+```
 
 ### 2. Create a Gridsome project
 

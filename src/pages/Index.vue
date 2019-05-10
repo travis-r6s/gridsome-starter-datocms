@@ -33,6 +33,16 @@
 
 <page-query>
 query HomePage {
+  allDatoCmsHome {
+    edges {
+      node {
+        seoSettings {
+          title
+          description
+        }
+      }
+    }
+  }
   works: allDatoCmsWork {
     edges {
       node {
@@ -56,10 +66,15 @@ query HomePage {
 export default {
   metaInfo () {
     return {
-      title: this.$page.work.title,
+      title: this.seoSettings.title,
       meta: [
-        { key: 'description', name: 'description', content: this.$page.work.excerpt }
+        { key: 'description', name: 'description', content: this.seoSettings.description }
       ]
+    }
+  },
+  computed: {
+    seoSettings () {
+      return this.$page.allDatoCmsHome.edges[0].node.seoSettings
     }
   }
 }

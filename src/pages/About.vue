@@ -1,14 +1,49 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <article class="sheet">
+      <div class="sheet__inner">
+        <h1 class="sheet__title">{{ datoCmsAboutPage.title }}</h1>
+        <p class="sheet__lead">{{ datoCmsAboutPage.subtitle }}</p>
+        <div class="sheet__gallery">
+          <img
+            :src="datoCmsAboutPage.photo.url"
+            :alt="datoCmsAboutPage.title" />
+        </div>
+        <div
+          v-html="datoCmsAboutPage.bio"
+          class="sheet__body" />
+      </div>
+    </article>
   </Layout>
 </template>
+
+<page-query>
+query AboutPage {
+  allDatoCmsAboutPage {
+    edges {
+      node {
+        id
+        title
+        subtitle
+        photo {
+          url
+        }
+        bio
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {
   metaInfo: {
     title: 'About us'
+  },
+  computed: {
+    datoCmsAboutPage () {
+      return this.$page.allDatoCmsAboutPage.edges[0].node
+    }
   }
 }
 </script>

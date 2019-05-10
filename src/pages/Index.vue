@@ -19,7 +19,7 @@
           </g-link>
           <figcaption class="card__caption">
             <h6 class="card__title">
-              <glink :to="`/work/${work.slug}`">{{ work.title }}</glink>
+              <g-link :to="`/work/${work.slug}`">{{ work.title }}</g-link>
             </h6>
             <div class="card__description">
               <p>{{ work.excerpt }}</p>
@@ -54,8 +54,13 @@ query HomePage {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
+  metaInfo () {
+    return {
+      title: this.$page.work.title,
+      meta: [
+        { key: 'description', name: 'description', content: this.$page.work.excerpt }
+      ]
+    }
   }
 }
 </script>

@@ -12,14 +12,14 @@
         class="showcase__item">
         <figure class="card">
           <g-link
-            :to="`/works/${work.slug}`"
+            :to="`/work/${work.slug}`"
             class="card__image">
             <img
               :src="work.coverImage.url" />
           </g-link>
           <figcaption class="card__caption">
             <h6 class="card__title">
-              <glink :to="`/works/${work.slug}`">{{ work.title }}</glink>
+              <glink :to="`/work/${work.slug}`">{{ work.title }}</glink>
             </h6>
             <div class="card__description">
               <p>{{ work.excerpt }}</p>

@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-datocms": "^0.0.2",
+    "@gridsome/source-datocms": "^0.1.0",
     "gridsome": "^0.6.6",
     "vue-carousel": "^0.18.0",
     "vue-masonry": "^0.11.7"

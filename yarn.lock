@@ -691,10 +691,10 @@
     semver "^5.6.0"
     sort-package-json "^1.15.0"
 
-"@gridsome/source-datocms@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-datocms/-/source-datocms-0.0.2.tgz#b19bda6704a73ea1e360d65852da343e30e7bbb2"
-  integrity sha512-HatqeIxv75KPzh9eV9rs6opYnZ490PADRJfxUL2KW5U3oPrhO73jxvX49A7xkATcIC7z6XH0GYFz2GHWiB1n8w==
+"@gridsome/source-datocms@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-datocms/-/source-datocms-0.1.0.tgz#5206bcca106cb7b39ccc8195b94b15d3bbe8c6fd"
+  integrity sha512-Svhw4nugzqWRjIVtdLwtRVLPbkUSvpHwLzRTeYPW5thBI0ZTWlne319BFGNCwlRY/axaphVy9jdWcGbHmlt+kg==
   dependencies:
     datocms-client "^0.7.5"
     humps "^2.0.1"

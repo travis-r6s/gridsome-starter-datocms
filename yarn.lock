@@ -692,10 +692,10 @@
     sort-package-json "^1.15.0"
     update-notifier "^3.0.1"
 
-"@gridsome/source-datocms@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-datocms/-/source-datocms-0.1.0.tgz#5206bcca106cb7b39ccc8195b94b15d3bbe8c6fd"
-  integrity sha512-Svhw4nugzqWRjIVtdLwtRVLPbkUSvpHwLzRTeYPW5thBI0ZTWlne319BFGNCwlRY/axaphVy9jdWcGbHmlt+kg==
+"@gridsome/source-datocms@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-datocms/-/source-datocms-0.2.0.tgz#2ac1298078d13f1e7f642fc1ae9f083d2dd1a2d6"
+  integrity sha512-Dgwnxmxgkd3WXrIM6Gia2YvFP37ImFKSMrzx0GUgT319F2hPutjhJJh0pihQrJLCY9NoLDs3gh2RgjwNvJl93g==
   dependencies:
     datocms-client "^0.7.5"
     humps "^2.0.1"
